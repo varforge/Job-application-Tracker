@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CareerTrack - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="top-nav">
+  <h2>CareerTrack</h2>
+
+  <div class="nav-links">
+   <button onclick="window.location.href='index.html'" class="btn">
+    Add Application
+  </button>
+
+   
+  </button>
+  </div>
+</div>
+
+   <div class="container">
+
+   
+    <div class="main">
+
+        <h1>Dashboard</h1>
+
+        <div class="cards">
+
+            <div class="card">
+  <h3><i class="fa-solid fa-briefcase"></i> Total Applications</h3>
+        <p id="totalCount">0</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-calendar"></i> Today's Applications</h3>
+                <p id="todayApps">0</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-user-tie"></i> Interviews</h3>
+                <p id="interviews">0</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fa-solid fa-circle-xmark"></i> Rejected</h3>
+                <p id="rejected">0</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div class="dashboard-grid">
+
+  <div class="chart-card">
+    <h2>Application Activity</h2>
+    <div class="chart-wrapper">
+      <canvas id="applicationsChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Applications Table -->
+  <div class="card">
+
+    <h2>Applications</h2>
+
+    <div class="table-controls">
+
+      <div class="table-search">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input 
+          type="text" 
+          id="searchInput" 
+          placeholder="Search company or role..."
+        >
+      </div>
+
+      <select id="statusFilter" onchange="filterStatus(this.value)">
+        <option value="all">All</option>
+        <option value="Applied">Applied</option>
+        <option value="Interview">Interview</option>
+        <option value="Rejected">Rejected</option>
+        <option value="Offer">Offer</option>
+      </select>
+
+    </div>
+
+    <div class="table-container">
+
+      <table id="applicationsTable">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+    </div>
+
+  </div>
+
+</div>
+
+    <div style="text-align:center; margin-top:20px;">
+      <a href="index.html">← Add New Application</a>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

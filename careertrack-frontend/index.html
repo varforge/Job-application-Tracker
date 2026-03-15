@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CareerTrack - Add Application</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+  rel="stylesheet">
+
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+</head>
+
+<body>
+
+  <div class="hero">
+    <h1>CareerTrack</h1>
+    <p>Track your job journey. Stay consistent. Land your dream offer.</p>
+  </div>
+
+
+  <div class="container">
+
+    <div class="card form-card">
+
+      <h2 id="formTitle">Add New Application</h2>
+
+      <form id="jobForm">
+
+  <!-- ROW 1 -->
+  <div class="form-row">
+
+    <div class="company-input-wrapper">
+    
+      <input
+        type="text"
+        name="company_name"
+        id="companyInput"
+        placeholder="Company Name (e.g., Amazon)"
+        autocomplete="off"
+        required>
+
+      <div id="companySuggestions" class="suggestions-box"></div>
+
+    </div>
+ 
+  <!-- <i class="fa-solid fa-briefcase input-icon"></i> -->
+    <input
+      type="text"
+      name="role"
+      placeholder="Role"
+      required>
+
+  </div>
+ 
+
+  <!-- ROW 2 -->
+  <div class="form-row">
+
+    <div class="date-input-wrapper">
+
+      <i class="fa-solid fa-calendar calendar-icon"></i>
+
+      <input
+        type="text"
+        id="datePicker"
+        name="applied_date"
+        placeholder="dd/mm/yyyy"
+        required>
+
+    </div>
+
+    <select name="status" required>
+
+      <option value="" disabled selected>Select Status</option>
+      <option value="Applied">Applied</option>
+      <option value="Interview">Interview</option>
+      <option value="Rejected">Rejected</option>
+      <option value="Offer">Offer</option>
+
+    </select>
+
+  </div>
+
+
+  <!-- BUTTONS -->
+  <div class="form-actions">
+
+    <button type="submit" id="submitBtn">
+      Add Application
+    </button>
+
+    <a href="dashboard.html" class="dashboard-btn">
+      Go to Dashboard →
+    </a>
+
+  </div>
+
+</form>
+
+    </div>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
