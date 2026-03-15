@@ -95,6 +95,4 @@ Where:
 
 Although hashing provides fast bucket access, it requires loading the entire dataset into browser memory. For large datasets (e.g., tens of thousands of companies), this increases frontend memory usage and slows down the application. A PostgreSQL-based approach keeps data in the database and returns only the required suggestions, making it more scalable.
 
-### Final Decision
-
-I chose PostgreSQL-based autocomplete because it integrates well with the backend and provides a scalable architecture for this project.
+ 
