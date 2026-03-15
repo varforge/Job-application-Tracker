@@ -117,10 +117,18 @@ app.post("/addApplication", async (req, res) => {
 
   try {
 
-    let{ company, role, status, applied_date } = req.body;
-     // convert dd/mm/yyyy → yyyy-mm-dd
-    const [day, month, year] = applied_date.split("/");
+    let { company, role, status, applied_date } = req.body;
+
+if (applied_date) {
+  const parts = applied_date.split("/");
+
+  if (parts.length === 3) {
+    const [day, month, year] = parts;
     applied_date = `${year}-${month}-${day}`;
+  } else {
+    console.error("Invalid date format:", applied_date);
+  }
+}
 
     await pool.query(
       `INSERT INTO applications (company,role,status,applied_date)
