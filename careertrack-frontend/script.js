@@ -19,7 +19,7 @@ if (editId && document.getElementById("jobForm")) {
 
       const app = data[0];
 
-      document.querySelector("[name='company_name']").value = app.company_name;
+      document.querySelector("[name='company']").value = app.company_name;
       document.querySelector("[name='role']").value = app.role;
       document.querySelector("[name='status']").value = app.status;
 
@@ -52,7 +52,7 @@ async function loadApplications() {
 
     const row = `
       <tr>
-        <td>${app.company_name}</td>
+        <td>${app.company }</td>
         <td>${app.role}</td>
 
         <td>
@@ -229,7 +229,7 @@ async function loadStatusChart() {
 
 // ---------------- COMPANY AUTOCOMPLETE ----------------
 
-const companyInput = document.querySelector("[name='company_name']");
+const companyInput = document.querySelector("[name='company']");
 const suggestionsBox = document.getElementById("companySuggestions");
 
 if (companyInput) {
