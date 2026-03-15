@@ -890,3 +890,33 @@ body{
   background-color: #f9fafb;
   transition: background 0.2s ease;
 }
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  /* stack dashboard cards */
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .stat-card {
+    width: 90%;
+  }
+
+  /* form fields full width */
+  .form-row {
+    flex-direction: column;
+  }
+
+  input, select, button {
+    width: 100%;
+  }
+
+  /* table scroll on phone */
+  .table-container {
+    overflow-x: auto;
+  }
+
+}
