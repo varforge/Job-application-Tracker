@@ -1,5 +1,5 @@
  
-const API_URL = "http://localhost:5000";
+const API_URL = "https://job-application-tracker-rzmq.onrender.com";
 
 const params = new URLSearchParams(window.location.search);
 const editId = params.get("id");
