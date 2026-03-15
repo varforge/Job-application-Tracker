@@ -925,4 +925,23 @@ body{
     font-size: 28px;
   }
 }
+/* ===== MOBILE DASHBOARD FIX ===== */
+
+@media (max-width: 768px) {
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
  
