@@ -838,3 +838,55 @@ body{
   color:#2563eb;
   font-weight:700;
 }
+/* ---------- MOBILE RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input, select, button {
+    width: 100%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+}
+/* -------- MOBILE TABLE SCROLL -------- */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#applicationsTable {
+  min-width: 600px;
+}
+/* -------- BETTER TABLE LOOK -------- */
+
+#applicationsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#applicationsTable th {
+  background-color: #f4f6f9;
+  font-weight: 600;
+  padding: 12px;
+  text-align: left;
+}
+
+#applicationsTable td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Row hover effect */
+#applicationsTable tbody tr:hover {
+  background-color: #f9fafb;
+  transition: background 0.2s ease;
+}
