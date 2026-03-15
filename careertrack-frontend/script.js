@@ -313,7 +313,7 @@ const dateInput = document.getElementById("datePicker");
 
 if (dateInput) {
   flatpickr("#datePicker", {
-    dateFormat: "d/m/Y",
+    dateFormat: "d-m-Y",
     allowInput: true,
     clickOpens: true,
     position:"below"
