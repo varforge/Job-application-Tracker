@@ -12,12 +12,18 @@ app.use(express.json());
 
 
 // ---------------- DATABASE ----------------
+// const pool = new Pool({
+//   user: "postgres",
+//   host: "localhost",
+//   database: "careertrack",
+//   password: "varadmin123",
+//   port: 5432,
+// });
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "careertrack",
-  password: "varadmin123",
-  port: 5432,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 pool.connect()
