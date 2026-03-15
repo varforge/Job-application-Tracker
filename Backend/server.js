@@ -124,14 +124,19 @@ app.post("/addApplication", async (req, res) => {
 }
 
 if (applied_date) {
-  const parts = applied_date.split("/");
+
+  const parts = applied_date.includes("/")
+    ? applied_date.split("/")
+    : applied_date.split("-");
 
   if (parts.length === 3) {
+
     const [day, month, year] = parts;
+
     applied_date = `${year}-${month}-${day}`;
-  } else {
-    console.error("Invalid date format:", applied_date);
+
   }
+
 }
 
     await pool.query(
