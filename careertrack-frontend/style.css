@@ -895,15 +895,15 @@ body{
 @media (max-width: 768px) {
 
   /* stack dashboard cards */
-  .stats-container {
-    flex-direction: column;
-    align-items: center;
+   .stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 15px;
   }
-
   .stat-card {
-    width: 90%;
+    width: 100%;
   }
+
 
   /* form fields full width */
   .form-row {
@@ -920,3 +920,4 @@ body{
   }
 
 }
+ 
