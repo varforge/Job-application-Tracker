@@ -116,8 +116,12 @@ app.post("/login", async (req, res) => {
 app.post("/addApplication", async (req, res) => {
 
   try {
+    console.log("Request body:", req.body);
 
     let { company, role, status, applied_date } = req.body;
+    if (!company || !role) {
+  return res.status(400).json({ error: "Company and role are required" });
+}
 
 if (applied_date) {
   const parts = applied_date.split("/");
