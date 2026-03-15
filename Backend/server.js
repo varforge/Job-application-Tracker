@@ -117,7 +117,7 @@ app.post("/addApplication", async (req, res) => {
 
   try {
 
-    const { company, role, status, applied_date } = req.body;
+    let{ company, role, status, applied_date } = req.body;
      // convert dd/mm/yyyy → yyyy-mm-dd
     const [day, month, year] = applied_date.split("/");
     applied_date = `${year}-${month}-${day}`;
