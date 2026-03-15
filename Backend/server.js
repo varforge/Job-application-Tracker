@@ -124,6 +124,7 @@ app.post("/addApplication", async (req, res) => {
   } catch (err) {
 
     console.error(err);
+       console.error("Database error:", err); 
     res.status(500).send("Error inserting data");
 
   }
