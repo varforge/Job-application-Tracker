@@ -114,7 +114,7 @@ app.post("/addApplication", async (req, res) => {
     const { company_name, role, status, applied_date } = req.body;
 
     await pool.query(
-      `INSERT INTO applications (company_name,role,status,applied_date)
+      `INSERT INTO applications (company ,role,status,applied_date)
        VALUES ($1,$2,$3,$4)`,
       [company_name, role, status, applied_date]
     );
