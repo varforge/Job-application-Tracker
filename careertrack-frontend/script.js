@@ -19,7 +19,7 @@ if (editId && document.getElementById("jobForm")) {
 
       const app = data[0];
 
-      document.querySelector("[name='company']").value = app.company_name;
+      document.querySelector("[name='company']").value = app.company;
       document.querySelector("[name='role']").value = app.role;
       document.querySelector("[name='status']").value = app.status;
 

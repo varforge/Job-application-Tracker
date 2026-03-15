@@ -7,7 +7,7 @@ const { Pool } = require("pg");
  
 
 const app = express();
-app.use(express.static(path.join("../careertrack-frontend")));   
+app.use(express.static(path.join(__dirname, "../careertrack-frontend"))); 
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../careertrack-frontend/index.html"));
@@ -37,10 +37,10 @@ pool.connect()
   .catch(err => console.error("DB Connection Error:", err.message));
 
 
-// ---------------- TEST ROUTE ----------------
-app.get("/", (req, res) => {
-  res.send("CareerTrack Backend Running 🚀");
-});
+// // ---------------- TEST ROUTE ----------------
+// app.get("/", (req, res) => {
+//   res.send("CareerTrack Backend Running 🚀");
+// });
 
 
 // ---------------- REGISTER ----------------
@@ -122,7 +122,7 @@ app.post("/addApplication", async (req, res) => {
     await pool.query(
       `INSERT INTO applications (company,role,status,applied_date)
        VALUES ($1,$2,$3,$4)`,
-      [company_name, role, status, applied_date]
+      [company, role, status, applied_date]
     );
 
     res.json({ message: "Application added successfully" });
@@ -193,7 +193,7 @@ app.put("/applications/:id", async (req, res) => {
 
     await pool.query(
       `UPDATE applications
-       SET company_name=$1,
+       SET company=$1,
            role=$2,
            status=$3,
            applied_date=$4
