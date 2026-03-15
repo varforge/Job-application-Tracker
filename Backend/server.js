@@ -6,10 +6,10 @@ const { Pool } = require("pg");
  
 
 const app = express();
-app.use(express.static(path.join(__dirname)));   
+app.use(express.static(path.join("../careertrack-frontend")));   
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend.html"));
+  res.sendFile(path.join(__dirname, "../careertrack-frontend/index.html"));
 });
 
 app.use(cors());
