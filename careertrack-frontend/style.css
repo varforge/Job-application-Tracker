@@ -49,7 +49,9 @@ h1 {
     transform: translateY(0);
   }
 }
-
+div {
+  background-color: inherit;
+}
 form input,
 form select {
   padding: 12px;
@@ -370,7 +372,8 @@ body{
     margin:auto;
     margin: 0 auto;
     padding: 20px;
-}
+    background-color: transparent !important;
+  }
 .dashboard-container{
     width:100%;
     padding:40px;
@@ -406,6 +409,7 @@ body{
     padding:30px;
     background:#f3f4f6;
     margin-top:30px;
+    background-color: transparent !important;
 }
 
 /* Cards */
@@ -447,7 +451,7 @@ body{
 .chart-container{
     width: 800px;
     margin-top: 30px;
-    background: white;
+    background-color: #1e293b !important;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -487,6 +491,9 @@ body{
 .table-container{
   max-height: 400px;
   overflow-y: auto;
+  background-color: #020617;
+  border-radius: 16px;
+  padding: 20px;
 }
 table{
   width:100%;
@@ -531,11 +538,11 @@ th{
   border-left:5px solid #ef4444;
 } */
 tbody tr:nth-child(even){
-  background:#12beca;
+  background:#e4e8e8;
 }
 
 tbody tr:hover{
-  background:#0b916f;
+  background:#eef1f0;
 }
 .table-search{
   margin:15px 0;
