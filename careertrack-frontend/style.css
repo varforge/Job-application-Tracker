@@ -1,9 +1,17 @@
- 
+:root {
+  --bg-main: #0f172a;
+  --card-bg: #1e293b;
+  --accent: #22c55e;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+}
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background: linear-gradient(180deg, #eef2f7 0%, #f9fbfd 100%);
-  color: #1f2937;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  /* background: linear-gradient(180deg, #eef2f7 0%, #f9fbfd 100%);
+  color: #1f2937; */
 }
 
 .container {
@@ -44,7 +52,8 @@ form select:focus {
 }
 
 button {
-  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  background-color: var(--accent);
+  /* background: linear-gradient(135deg, #2a5298, #1e3c72); */
   color: white;
   border: none;
   padding: 12px;
@@ -57,6 +66,8 @@ button {
 button:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+  transform: scale(1.02);
 }
 
 table {
@@ -171,7 +182,8 @@ thead th{
 }
 /* HERO SECTION */
 .hero {
-  background: linear-gradient(135deg,#3b82f6,#1d4ed8);
+  /* background: linear-gradient(135deg,#3b82f6,#1d4ed8); */
+  background-color: var(--bg-main);
   padding: 60px 20px;
   text-align: center;
   color: white;
@@ -374,16 +386,22 @@ body{
 }
  
 .card{
-    background:white;
+    background-color: var(--card-bg);
     padding:25px;
     border-radius:12px;
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
     text-align:center;
+    margin-top:40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
 .card p{
     font-size:28px;
     font-weight:bold;
+    color: var(--text-muted);
+   
 }
 .chart-container{
     width: 800px;
@@ -424,9 +442,7 @@ body{
     width:400px;
     margin:auto;
 }
-.card{
-    margin-top:40px;
-}
+ 
 .card:hover{
     transform:translateY(-3px);
     transition:0.2s;
