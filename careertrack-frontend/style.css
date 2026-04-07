@@ -31,7 +31,7 @@ h1 {
 }
 
 .card {
-  background: rgb(16, 14, 14);
+  background: rgb(16, 14, 14) !important;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.08);
@@ -194,7 +194,7 @@ thead th{
   color: white;
 }
 h1, h2 {
-  color: #ffffff;
+  color: #ffffff !important;
   text-align:left;
 }
 /* HERO SECTION */
@@ -917,7 +917,7 @@ body{
 
 /* Row hover effect */
 #applicationsTable tbody tr:hover {
-  background-color: #f9fafb;
+  background-color: #080809;
   transition: background 0.2s ease;
 }
 /* ===== MOBILE RESPONSIVE ===== */
