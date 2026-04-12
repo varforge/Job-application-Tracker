@@ -756,14 +756,14 @@ tbody tr:hover{
   left:0;
   width:100%;
   background: #1e293b;   /* dark */
-  color: white;    
+  color: rgb(161, 74, 74);    
   border:1px solid #ddd;
   max-height:200px;
   overflow-y:auto;
   z-index: 99999;
 }
 .suggestions-box div {
-  color: white;
+  color: rgb(51, 158, 96);
 }
 .suggestion-item{
   padding:10px;
