@@ -166,7 +166,13 @@ if (form) {
     const submitBtn = document.getElementById("submitBtn");
 
     const formData = new FormData(this);
-    const data = Object.fromEntries(formData.entries());
+    // const data = Object.fromEntries(formData.entries());
+    const data = {
+  company: formData.get("company") || "",
+  role: formData.get("role") || "",
+  status: formData.get("status") || "",
+  applied_date: formData.get("applied_date") || ""
+};
 
     const url = editId
       ? `${API_URL}/applications/${editId}`
