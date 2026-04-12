@@ -507,16 +507,14 @@ button:hover {
 .table-header {
   display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
-
   background: #020617;
   color: #94a3b8;
-
   padding: 12px;
   font-weight: 600;
-
   position: sticky;
   top: 0;
   z-index: 10;
+  padding-right: 8px;
 }
 .table-body {
   max-height: 400px;
@@ -907,6 +905,7 @@ background:#f3f4f6;
 #applicationsTable {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 #applicationsTable th {
@@ -918,7 +917,7 @@ background:#f3f4f6;
 }
 
 #applicationsTable td {
-  padding: 12px;
+  padding: 0;
   border-bottom: 1px solid #e5e7eb;
 }
 
@@ -978,5 +977,11 @@ background:#f3f4f6;
     grid-template-columns: 1fr;
   }
 
+}
+.table-header,
+#applicationsTable tbody tr {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+  align-items: center;
 }
  
