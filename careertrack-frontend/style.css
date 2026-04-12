@@ -499,7 +499,7 @@ button:hover {
     border-radius:12px;
     margin:40px auto;
     max-width:900px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    box-shadow:0 15px 35px rgba(0, 0, 0, 0.45);
 }
   
 
@@ -644,9 +644,7 @@ tbody tr:hover {
   background:#f3f4f6;
 } */
 
-#applicationsTable th{
-  font-weight:600;
-}
+
 .delete-btn{
   background:#ef4444;
   border:none;
@@ -896,9 +894,7 @@ background:#f3f4f6;
   overflow-x: auto;
 }
 
-#applicationsTable {
-  min-width: 600px;
-}
+ 
 /* -------- BETTER TABLE LOOK -------- */
 
 #applicationsTable {
@@ -907,7 +903,8 @@ background:#f3f4f6;
 }
 
 #applicationsTable th {
-  background-color: #f4f6f9;
+  background: rgba(255,255,255,0.04);
+  color: #94a3b8;
   font-weight: 600;
   padding: 12px;
   text-align: left;
