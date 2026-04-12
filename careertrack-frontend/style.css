@@ -179,6 +179,7 @@ tr:not(:last-child) {
 }
 
 thead th {
+  position:sticky;
   background: rgba(255,255,255,0.04);
   color: #94a3b8;
   border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -497,11 +498,35 @@ button:hover {
   max-height: 400px;
   overflow-y: auto;
   background-color: #020617;
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 20px;
   position: relative;
   width:100%;
+  overflow: hidden;
+}
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
 
+  background: #020617;
+  color: #94a3b8;
+
+  padding: 12px;
+  font-weight: 600;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.table-body {
+  max-height: 400px;
+  overflow-y: auto;
+}
+#applicationsTable tbody tr {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 table{
   width:100%;
