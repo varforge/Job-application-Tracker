@@ -881,7 +881,11 @@ background:#f3f4f6;
   gap: 15px;
   margin-bottom: 15px;
 }
-
+/* //19;32 */
+.form-row > * {
+  flex: 1;
+  min-width: 0;    
+}
 .form-row input,
 .form-row select {
   flex: 1;
@@ -968,7 +972,11 @@ background:#f3f4f6;
   .top-nav h2 {
     font-size: 18px;
   }
-
+ 
+  select {
+    width: 100%;
+     box-sizing: border-box;
+  }
   /* CARDS */
   .cards {
     grid-template-columns: 1fr 1fr;
