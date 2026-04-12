@@ -12,10 +12,16 @@
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
-  background: radial-gradient(circle at top, #1e293b, #020617);
   color: var(--text-main);
-  /* background: linear-gradient(180deg, #eef2f7 0%, #f9fbfd 100%);
-  color: #1f2937; */
+
+  /* layered depth */
+  background:
+    radial-gradient(circle at 20% 10%, rgba(59,130,246,0.08), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(34,197,94,0.06), transparent 40%),
+    linear-gradient(180deg, #0f172a 0%, #020617 100%);
+
+  /* subtle texture feel */
+  background-blend-mode: overlay;
 }
 
 .container {
@@ -224,10 +230,17 @@ h1, h2 {
 .form-card {
   max-width: 600px;
   margin: auto;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.95);
+
+  background: rgba(30, 41, 59, 0.95); /* dark glass */
+  backdrop-filter: blur(12px);
+
   border-radius: 15px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+  /* ADD THIS ↓ */
+  border: 1px solid #333;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+
   padding: 30px;
 }
 
@@ -421,17 +434,22 @@ body{
     margin-top:20px;
     }
  
-.card{
-    background-color: #1e293b;
-    color: #ffffff;
-    padding:25px;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
-    text-align:center;
-    margin-top:40px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
+.card {
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+
+  /* ADD THIS ↓ */
+  border: 1px solid #333;
+
+  /* refine shadow */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+
+  text-align: center;
+  margin-top: 40px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card p{
@@ -482,11 +500,9 @@ body{
     width:400px;
     margin:auto;
 }
- 
-.card:hover{
-    transform:translateY(-3px);
-    transition:0.2s;
-    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
 }
 .table-container{
   max-height: 400px;
@@ -505,15 +521,8 @@ th{
   top:0;
   background:white;
 }
-.card{
-  background:white;
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.08);
-}
-.card{
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+ 
+ 
 
 .card:hover{
   transform: translateY(-5px);
