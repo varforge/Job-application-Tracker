@@ -760,7 +760,7 @@ tbody tr:hover{
   border:1px solid #ddd;
   max-height:200px;
   overflow-y:auto;
-  z-index:1000;
+  z-index: 99999;
 }
 .suggestions-box div {
   color: white;
