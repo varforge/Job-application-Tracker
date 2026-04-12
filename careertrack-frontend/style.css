@@ -978,10 +978,5 @@ background:#f3f4f6;
   }
 
 }
-.table-header,
-#applicationsTable tbody tr {
-  display: grid;
-  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
-  align-items: center;
-}
+ 
  
