@@ -494,12 +494,13 @@ button:hover {
 }
 .chart-card{
     background: #1e293b;
-    padding:20px;
+    padding:16px;
     border-radius:12px;
     margin:40px auto;
     max-width:900px;
     box-shadow:0 4px 12px rgba(0,0,0,0.08);
-  }
+}
+  
 
 .chart-wrapper{
     width:400px;
@@ -576,17 +577,7 @@ tbody tr:hover {
   align-items: start;
 }
 
-.chart-card{
-  background:white;
-  padding:25px;
-  border-radius:10px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.08);
-}
 
-.chart-wrapper{
-  width:260px;
-  margin:auto;
-}
  
 .status-filters{
   margin:10px 0 15px 0;
