@@ -502,7 +502,7 @@ button:hover {
   padding: 20px;
   position: relative;
   width:100%;
-  overflow: visible;
+  overflow:hidden;
 }
 /* .table-header {
   display: grid;
