@@ -13,7 +13,6 @@ body {
   font-family: 'Inter', sans-serif;
   margin: 0;
   color: var(--text-main);
-
   /* layered depth */
   background:
     radial-gradient(circle at 20% 10%, rgba(59,130,246,0.08), transparent 40%),
@@ -37,10 +36,9 @@ h1 {
 }
 
 .card {
-  background: rgb(16, 14, 14) !important;
+  background: #1e293b;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   margin-bottom: 25px;
   backdrop-filter: blur(10px);
   animation: fadeIn 0.4s ease-in;
@@ -236,7 +234,7 @@ h1, h2 {
 
   border-radius: 15px;
 
-  /* ADD THIS ↓ */
+
   border: 1px solid #333;
 
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
@@ -373,10 +371,7 @@ button:hover {
   color: #6b7280;
   font-size: 14px;
 }
-body{
-    margin:0;
-    font-family:Arial;
-}
+
 
 .container{
     display:flex;
@@ -521,13 +516,6 @@ th{
   top:0;
   background:white;
 }
- 
- 
-
-.card:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-}
 
 /* BORDER LEFT  */
 
@@ -586,10 +574,7 @@ tbody tr:hover{
   width:350px;
   margin:auto;
 }
-.card:hover{
-  transform:translateY(-4px);
-  transition:0.2s;
-}
+ 
 .status-filters{
   margin:10px 0 15px 0;
 }
@@ -880,10 +865,6 @@ background:#f3f4f6;
 
 #datePicker {
   padding-left: 35px;
-}
-body{
-  font-family: "Inter", sans-serif;
-  margin:0;
 }
 .top-nav{
   display:flex;
