@@ -214,7 +214,9 @@ h1, h2 {
 }
 
 .hero h1 {
-  font-size: 40px;
+  font-size: 44px;     /* slightly bigger */
+  font-weight: 800;    /* bolder */
+  letter-spacing: -0.5px;
   margin-bottom: 10px;
 }
 
@@ -222,6 +224,8 @@ h1, h2 {
   font-size: 18px;
   opacity: 0.9;
   color: var(--text-muted);
+  max-width: 500px;   /* 🔥 key fix */
+  line-height: 1.6;
 }
 
 /* FORM CARD */
@@ -280,19 +284,25 @@ form select {
   border-radius: 8px;
   border: 1px solid #d1d5db;
 }
-
-button {
-  padding: 10px 16px;
-  border-radius: 8px;
+  button {
+  padding: 12px 24px;   /* wider */
+  border-radius: 8px;   /* cleaner corners */
   border: none;
-  background: #2563eb;
+
+  background: linear-gradient(135deg, #2563eb, #1e40af);
   color: white;
+
   font-weight: 600;
   cursor: pointer;
+
+  transition: all 0.25s ease;
 }
 
+
 button:hover {
-  background: #1e4ed8;
+  background:  linear-gradient(135deg, #3b82f6, #1d4ed8);;
+  filter: brightness(1.1);   /* 🔥 smooth effect */
+  transform: translateY(-1px);
 }
 .activity-grid {
   display: grid;
@@ -757,7 +767,6 @@ tbody tr:hover{
   width:100%;
   background: #1e293b;   /* dark */
   color: rgb(161, 74, 74);    
-  border:1px solid #ddd;
   max-height:200px;
   overflow-y:auto;
   z-index: 99999;
@@ -770,9 +779,9 @@ tbody tr:hover{
   cursor:pointer;
 }
 
-.suggestion-item:hover{
+/* .suggestion-item:hover{
   background:rebeccapurple;
-}
+} */
 .suggestions-box div:hover {
   background: #334155;
 }
