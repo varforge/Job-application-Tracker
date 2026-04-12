@@ -978,52 +978,44 @@ background:#f3f4f6;
   }
 
 }
+/* FORCE TABLE STRUCTURE */
 #applicationsTable {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed; /* 🔥 THIS fixes alignment */
+  table-layout: fixed;
 }
 
-/* Set exact column widths */
-#applicationsTable th:nth-child(1),
-#applicationsTable td:nth-child(1) {
-  width: 25%;
-}
-
-#applicationsTable th:nth-child(2),
-#applicationsTable td:nth-child(2) {
-  width: 25%;
-}
-
-#applicationsTable th:nth-child(3),
-#applicationsTable td:nth-child(3) {
-  width: 15%;
-}
-
-#applicationsTable th:nth-child(4),
-#applicationsTable td:nth-child(4) {
-  width: 15%;
-}
-
-#applicationsTable th:nth-child(5),
-#applicationsTable td:nth-child(5) {
-  width: 20%;
-}
-
-/* Sticky header */
-#applicationsTable thead th {
-  position: sticky;
-  top: 0;
-  background: #020617;
-  z-index: 2;
-}
-
-/* Clean spacing */
+/* FORCE COLUMN WIDTHS (HEADER + ROWS MATCH) */
 #applicationsTable th,
 #applicationsTable td {
   padding: 12px;
   text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
- 
- 
+/* COLUMN SIZES */
+#applicationsTable th:nth-child(1),
+#applicationsTable td:nth-child(1) { width: 25%; }
+
+#applicationsTable th:nth-child(2),
+#applicationsTable td:nth-child(2) { width: 25%; }
+
+#applicationsTable th:nth-child(3),
+#applicationsTable td:nth-child(3) { width: 15%; }
+
+#applicationsTable th:nth-child(4),
+#applicationsTable td:nth-child(4) { width: 15%; }
+
+#applicationsTable th:nth-child(5),
+#applicationsTable td:nth-child(5) { width: 20%; }
+
+/* STICKY HEADER */
+#applicationsTable thead th {
+  position: sticky;
+  top: 0;
+  background: #020617;
+  z-index: 5;
+}
+
