@@ -193,7 +193,7 @@ thead th{
 .welcome-card {
   text-align: center;
   background: linear-gradient(135deg, #4CAF50, #2e7d32);
-  color: white;
+  /* color: white; */
 }
 h1, h2 {
   color: #ffffff !important;
