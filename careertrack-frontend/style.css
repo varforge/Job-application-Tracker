@@ -505,7 +505,7 @@ button:hover {
   overflow: hidden;
 }
 .table-header {
-  display: grid;
+ 
   grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
   background: #020617;
   color: #94a3b8;
@@ -521,7 +521,6 @@ button:hover {
   overflow-y: auto;
 }
 #applicationsTable tbody tr {
-  display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
   padding: 12px;
   border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -918,8 +917,7 @@ background:#f3f4f6;
 }
 
 #applicationsTable td {
-  display: block;
-  padding: 0;
+  padding: 12px;
   border-bottom: 1px solid #e5e7eb;
 }
 
