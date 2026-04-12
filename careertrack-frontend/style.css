@@ -1029,6 +1029,43 @@ background:#f3f4f6;
   }
 
 }
+/* overriding */
+/* 📱 Mobile (phones) */
+@media (max-width: 480px) {
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .table-controls {
+    flex-direction: column;
+  }
+
+}
+
+
+/* 📲 Tablets */
+@media (max-width: 768px) {
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* 💻 Small laptops / large tablets */
+@media (max-width: 1024px) {
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
 /* //table */
 .table-header,
 .table-row {
