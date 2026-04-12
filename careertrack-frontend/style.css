@@ -755,13 +755,16 @@ tbody tr:hover{
   top:100%;
   left:0;
   width:100%;
-  background:white;
+  background: #1e293b;   /* dark */
+  color: white;    
   border:1px solid #ddd;
   max-height:200px;
   overflow-y:auto;
   z-index:1000;
 }
-
+.suggestions-box div {
+  color: white;
+}
 .suggestion-item{
   padding:10px;
   cursor:pointer;
@@ -769,6 +772,9 @@ tbody tr:hover{
 
 .suggestion-item:hover{
   background:#f3f4f6;
+}
+.suggestions-box div:hover {
+  background: #334155;
 }
  
 .form-row > div{
