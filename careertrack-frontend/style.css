@@ -504,7 +504,7 @@ button:hover {
   width:100%;
   overflow: hidden;
 }
-.table-header {
+/* .table-header {
   display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
   background: #020617;
@@ -519,7 +519,7 @@ button:hover {
 .table-body {
   max-height: 400px;
   overflow-y: auto;
-}
+} */
 #applicationsTable tbody tr {
   grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
   padding: 12px;
@@ -978,44 +978,31 @@ background:#f3f4f6;
   }
 
 }
-/* FORCE TABLE STRUCTURE */
-#applicationsTable {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+  align-items: center;
 }
 
-/* FORCE COLUMN WIDTHS (HEADER + ROWS MATCH) */
-#applicationsTable th,
-#applicationsTable td {
-  padding: 12px;
-  text-align: left;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-/* COLUMN SIZES */
-#applicationsTable th:nth-child(1),
-#applicationsTable td:nth-child(1) { width: 25%; }
-
-#applicationsTable th:nth-child(2),
-#applicationsTable td:nth-child(2) { width: 25%; }
-
-#applicationsTable th:nth-child(3),
-#applicationsTable td:nth-child(3) { width: 15%; }
-
-#applicationsTable th:nth-child(4),
-#applicationsTable td:nth-child(4) { width: 15%; }
-
-#applicationsTable th:nth-child(5),
-#applicationsTable td:nth-child(5) { width: 20%; }
-
-/* STICKY HEADER */
-#applicationsTable thead th {
+.table-header {
   position: sticky;
   top: 0;
   background: #020617;
+  color: #94a3b8;
+  font-weight: 600;
+  padding: 12px;
   z-index: 5;
 }
 
+.table-body {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.table-row {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+ 
+ 

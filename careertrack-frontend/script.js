@@ -38,9 +38,11 @@ if (editId && document.getElementById("jobForm")) {
 async function loadApplications() {
 
   const table = document.querySelector("#applicationsTable");
+  const tableBody = document.getElementById("applicationsTable");
+tableBody.innerHTML = "";
   if (!table) return;
 
-  const tableBody = table.querySelector("tbody");
+  // const tableBody = table.querySelector("tbody"); won't work 
   tableBody.innerHTML = "";
 
   const response = await fetch(`${API_URL}/applications`);
@@ -49,33 +51,58 @@ async function loadApplications() {
   data.forEach(app => {
 
     const formattedDate = new Date(app.applied_date).toLocaleDateString("en-IN");
+    // wont work
+    // const row = ` 
+    //   <tr>
+    //     <td>${app.company }</td>
+    //     <td>${app.role}</td>
 
-    const row = `
-      <tr>
-        <td>${app.company }</td>
-        <td>${app.role}</td>
+    //     <td>
+    //       <span class="status ${app.status.toLowerCase()}">
+    //         ${app.status}
+    //       </span>
+    //     </td>
 
-        <td>
-          <span class="status ${app.status.toLowerCase()}">
-            ${app.status}
-          </span>
-        </td>
+    //     <td>${formattedDate}</td>
 
-        <td>${formattedDate}</td>
+    //     <td>
+    //       <button onclick="editApplication(${app.id})" class="edit-btn">
+    //         <i class="fa-solid fa-pen"></i>
+    //       </button>
 
-        <td>
-          <button onclick="editApplication(${app.id})" class="edit-btn">
-            <i class="fa-solid fa-pen"></i>
-          </button>
+    //       <button onclick="deleteApplication(${app.id})" class="delete-btn">
+    //         <i class="fa-solid fa-trash"></i>
+    //       </button>
+    //     </td>
+    //   </tr>
+    // `;
+    const row = document.createElement("div");
+row.className = "table-row";
 
-          <button onclick="deleteApplication(${app.id})" class="delete-btn">
-            <i class="fa-solid fa-trash"></i>
-          </button>
-        </td>
-      </tr>
-    `;
+row.innerHTML = `
+  <div>${app.company}</div>
+  <div>${app.role}</div>
 
-    tableBody.innerHTML += row;
+  <div>
+    <span class="status ${app.status.toLowerCase()}">
+      ${app.status}
+    </span>
+  </div>
+
+  <div>${formattedDate}</div>
+
+  <div>
+    <button onclick="editApplication(${app.id})" class="edit-btn">
+      <i class="fa-solid fa-pen"></i>
+    </button>
+
+    <button onclick="deleteApplication(${app.id})" class="delete-btn">
+      <i class="fa-solid fa-trash"></i>
+    </button>
+  </div>
+`;
+
+    tableBody.appendChild(row);
 
   });
 
