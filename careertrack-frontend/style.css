@@ -93,11 +93,6 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
-
-thead {
-  background: #f4f6fa !important;
-}
-
 th, td {
   padding: 12px 14px;
   text-align: left;
@@ -187,12 +182,18 @@ tr:not(:last-child) {
     max-width:1000px;
     margin:auto;
 }
+thead {
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+}
 
 thead th{
   position: sticky;
   top: 0;
-  background: white !important;
+  background: #020617; /* match your table bg */
+  color: #94a3b8;
   z-index: 1;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .welcome-card {
   text-align: center;
@@ -522,11 +523,11 @@ table{
   border-collapse:collapse;
 }
 
-th{
+/* th{
   position:sticky;
   top:0;
   background:white;
-}
+} */
 
 /* BORDER LEFT  */
 
@@ -639,9 +640,9 @@ tbody tr:hover {
   border:1px solid #d1d5db;
   cursor:pointer;
 }
-#applicationsTable thead{
+/* #applicationsTable thead{
   background:#f3f4f6;
-}
+} */
 
 #applicationsTable th{
   font-weight:600;
@@ -760,20 +761,25 @@ tbody tr:hover {
   flex: 1;
 }
  
-.suggestions-box{
-  position:absolute;
-  top:100%;
-  left:0;
-  width:100%;
-  background: #1e293b;   /* dark */
-  color: rgb(161, 74, 74);    
-  max-height:200px;
-  overflow-y:auto;
+.suggestions-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #1e293b;
+  color: white;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
   z-index: 99999;
 }
+
 .suggestions-box div {
-  color: rgb(9, 18, 13);
+  color: white;
+  padding:10px;
+cursor:pointer;
 }
+ 
 .suggestion-item{
   padding:10px;
   cursor:pointer;
@@ -785,6 +791,11 @@ tbody tr:hover {
 .suggestions-box div:hover {
   background: #334155;
 }
+ 
+/* 
+.suggestions-box div:hover{
+background:#f3f4f6;
+} */
  
 .form-row > div{
   flex: 1;
@@ -803,28 +814,8 @@ tbody tr:hover {
   width: 100%;
   box-sizing: border-box;
 }
-.suggestions-box{
-position:absolute;
-top:100%;
-left:0;
-width:100%;
-background:white;
-border:1px solid #e5e7eb;
-border-radius:8px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
-max-height:200px;
-overflow-y:auto;
-z-index:10;
-}
 
-.suggestions-box div{
-padding:10px;
-cursor:pointer;
-}
 
-.suggestions-box div:hover{
-background:#f3f4f6;
-}
 
 /* For Icons */
 /* .input-wrapper{
