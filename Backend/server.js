@@ -113,49 +113,38 @@ app.post("/login", async (req, res) => {
 
 
 // ---------------- ADD APPLICATION ----------------
-app.post("/addApplication", async (req, res) => {
+  app.post("/addApplication", async (req, res) => {
 
-  try {
-    console.log("Request body:", req.body);
+    try {
+      console.log("Request body:", req.body);
 
-    let { company, role, status, applied_date } = req.body;
-    if (!company || !role) {
-  return res.status(400).json({ error: "Company and role are required" });
-}
-
-if (applied_date) {
-
-  const parts = applied_date.includes("/")
-    ? applied_date.split("/")
-    : applied_date.split("-");
-
-  if (parts.length === 3) {
-
-    const [day, month, year] = parts;
-
-    applied_date = `${year}-${month}-${day}`;
-
+      let { company, role, status, applied_date } = req.body;
+      if (!company || !role) {
+    return res.status(400).json({ error: "Company and role are required" });
   }
 
+  if (applied_date && applied_date.includes("/")) {
+  const [day, month, year] = applied_date.split("/");
+  applied_date = `${year}-${month}-${day}`;
 }
 
-    await pool.query(
-      `INSERT INTO applications (company,role,status,applied_date)
-       VALUES ($1,$2,$3,$4)`,
-      [company, role, status, applied_date]
-    );
+      await pool.query(
+        `INSERT INTO applications (company,role,status,applied_date)
+        VALUES ($1,$2,$3,$4)`,
+        [company, role, status, applied_date]
+      );
 
-    res.json({ message: "Application added successfully" });
+      res.json({ message: "Application added successfully" });
 
-  } catch (err) {
+    } catch (err) {
 
-    console.error(err);
-       console.error("Database error:", err); 
-    res.status(500).send("Error inserting data");
+      console.error(err);
+        console.error("Database error:", err); 
+      res.status(500).send("Error inserting data");
 
-  }
+    }
 
-});
+  });
 
 
 // ---------------- GET APPLICATIONS ----------------
