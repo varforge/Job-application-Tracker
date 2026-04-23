@@ -10,25 +10,27 @@ if (editId && document.getElementById("jobForm")) {
 
   document.getElementById("formTitle").innerText = "Edit Application";
   document.getElementById("submitBtn").innerText = "Update Application";
+   
 
   fetch(`${API_URL}/applications/${editId}`)
-    .then(res => res.json())
-    .then(app => {
+  .then(res => res.json())
+  .then(app => {
 
-     if (!app) return;
- 
+    if (!app) return;
 
-      document.querySelector("[name='company']").value = app.company;
-      document.querySelector("[name='role']").value = app.role;
-      document.querySelector("[name='status']").value = app.status;
+    document.querySelector("[name='company']").value = app.company || "";
+    document.querySelector("[name='role']").value = app.role || "";
+    document.querySelector("[name='status']").value = app.status || "";
 
-      if (document.getElementById("datePicker")) {
-        setTimeout(() => {
-          document.getElementById("datePicker")._flatpickr.setDate(app.applied_date);
-        }, 100);
-      }
+    const dateInput = document.getElementById("datePicker");
 
-    });
+    if (dateInput && dateInput._flatpickr) {
+      dateInput._flatpickr.setDate(app.applied_date);
+    } else if (dateInput) {
+      dateInput.value = app.applied_date || "";
+    }
+
+  });
 
 }
 

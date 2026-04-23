@@ -877,7 +877,8 @@ transform:translateY(-50%);
 color:#6b7280;
 } */
  .suggestion-active{
-background:#f3f4f6;
+background: #334155;   /* dark highlight */
+  color: white;
 }
  .form-row {
   display: flex;
@@ -1084,7 +1085,7 @@ background:#f3f4f6;
 
 .table-body {
   max-height: 400px;
-  overflow-y: auto;
+  overflow-y: visible;
 }
 
 .table-row {
