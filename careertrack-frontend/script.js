@@ -16,8 +16,7 @@ if (editId && document.getElementById("jobForm")) {
     .then(app => {
 
      if (!app) return;
-
-      const app = data[0];
+ 
 
       document.querySelector("[name='company']").value = app.company;
       document.querySelector("[name='role']").value = app.role;
@@ -37,7 +36,7 @@ if (editId && document.getElementById("jobForm")) {
 // ---------------- LOAD APPLICATIONS ----------------
 async function loadApplications() {
   const tableBody = document.getElementById("applicationsTable");
-tableBody.innerHTML = "";
+// tableBody.innerHTML = "";
   if (!table) return;
 
   // const tableBody = table.querySelector("tbody"); won't work 
