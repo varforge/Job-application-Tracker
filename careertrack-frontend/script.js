@@ -15,7 +15,7 @@ if (editId && document.getElementById("jobForm")) {
   fetch(`${API_URL}/applications/${editId}`)
   .then(res => res.json())
   .then(data => {
-     console.log("EDIT DATA:", response);
+     console.log("EDIT DATA:", data);
 
     const app = Array.isArray(data) ? data[0] : data;
     if (!app) return;
