@@ -168,13 +168,24 @@ if (form) {
 
     const formData = new FormData(this);
     // const data = Object.fromEntries(formData.entries());
-    const data = {
+    const rawDate = formData.get("applied_date");
+
+let formattedDate = rawDate;
+
+// force fix if user typed manually
+if (rawDate && rawDate.includes("/")) {
+  const [day, month, year] = rawDate.split("/");
+  formattedDate = `${year}-${month}-${day}`;
+}
+
+const data = {
   company: formData.get("company") || "",
   role: formData.get("role") || "",
   status: formData.get("status") || "",
-  applied_date: formData.get("applied_date") || ""
+  applied_date: formattedDate
 };
 
+console.log("SENDING DATA:", data);
     const url = editId
       ? `${API_URL}/applications/${editId}`
       : `${API_URL}/addApplication`;
