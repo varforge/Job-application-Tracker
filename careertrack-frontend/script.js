@@ -1,3 +1,5 @@
+const { response } = require("express");
+
  
 const API_URL = "https://job-application-tracker-rzmq.onrender.com";
 
@@ -14,8 +16,10 @@ if (editId && document.getElementById("jobForm")) {
 
   fetch(`${API_URL}/applications/${editId}`)
   .then(res => res.json())
-  .then(app => {
+  .then(response => {
+     console.log("EDIT DATA:", response);
 
+    const app = Array.isArray(response) ? response[0] : response;
     if (!app) return;
 
     document.querySelector("[name='company']").value = app.company || "";
