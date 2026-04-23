@@ -37,7 +37,7 @@ if (editId && document.getElementById("jobForm")) {
 async function loadApplications() {
   const tableBody = document.getElementById("applicationsTable");
 // tableBody.innerHTML = "";
-  if (!table) return;
+  if (!tableBody) return;
 
   // const tableBody = table.querySelector("tbody"); won't work 
   tableBody.innerHTML = "";
