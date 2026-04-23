@@ -13,9 +13,9 @@ if (editId && document.getElementById("jobForm")) {
 
   fetch(`${API_URL}/applications/${editId}`)
     .then(res => res.json())
-    .then(data => {
+    .then(app => {
 
-      if (!data || !data.length) return;
+     if (!app) return;
 
       const app = data[0];
 
@@ -36,8 +36,6 @@ if (editId && document.getElementById("jobForm")) {
 
 // ---------------- LOAD APPLICATIONS ----------------
 async function loadApplications() {
-
-  const table = document.querySelector("#applicationsTable");
   const tableBody = document.getElementById("applicationsTable");
 tableBody.innerHTML = "";
   if (!table) return;
@@ -190,8 +188,16 @@ if (form) {
       },
       body: JSON.stringify(data)
     });
+    if (editId) {
+  // remove ?id= from URL
+  window.history.replaceState({}, document.title, "index.html");
 
-    submitBtn.innerText = editId ? "Update Application" : "Add Application";
+  // reset button + title
+  document.getElementById("formTitle").innerText = "Add New Application";
+  submitBtn.innerText = "Add Application";
+}
+
+    
     submitBtn.disabled = false;
 
     form.reset();
@@ -365,7 +371,7 @@ if (searchInput) {
       .toLowerCase()
       .replace(/\s+/g, " "); // converts multiple spaces → single space
 
-    const rows = document.querySelectorAll("#applicationsTable tbody tr");
+    const rows = document.querySelectorAll("#applicationsTable .table-row");
 
     rows.forEach(row => {
 
@@ -392,7 +398,7 @@ if (searchInput) {
 
 function filterStatus(status) {
 
-  const rows = document.querySelectorAll("#applicationsTable tbody tr");
+  const rows = document.querySelectorAll("#applicationsTable .table-row");
 
   rows.forEach(row => {
 

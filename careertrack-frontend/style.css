@@ -339,52 +339,55 @@ button:hover {
   background: #15803d;
 } */
 /* NAVIGATION BAR */
+ 
 .top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  padding: 16px 40px;
+  padding: 14px 40px;
 
   background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(12px);
-
   border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 
   position: sticky;
   top: 0;
   z-index: 100;
 }
+
 .top-nav h1,
 .top-nav a {
   color: #ffffff;
 }
-.nav-links{
-  display:flex;
-  align-items:center;
+
+.nav-links {
+  display: flex;
+  align-items: center;
 }
 
-.nav-links a:hover{
-  text-decoration:underline;
-  color: #22c55e; 
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #cbd5f5;
+  transition: color 0.2s ease;
 }
 
+.nav-links a:hover {
+  color: #22c55e;
+}
+
+.nav-links a:first-child {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
 .top-nav h2 {
   margin: 0;
-}
-
-.nav-links a{
-  margin-left:20px;
-  text-decoration:none;
-  font-weight:500;
   color:#2563eb;
-}
-
- .nav-links a:first-child{
-  background:#2563eb;
-  color:white;
-  padding:8px 14px;
-  border-radius:6px;
+  font-weight:700;
 }
 .welcome-card h2 {
   margin-bottom: 8px;
@@ -532,7 +535,7 @@ button:hover {
   padding: 20px;
   position: relative;
   width:100%;
-  overflow:hidden;
+  overflow-x:hidden;
 }
 /* .table-header {
   display: grid;
@@ -912,19 +915,9 @@ background:#f3f4f6;
 #datePicker {
   padding-left: 35px;
 }
-.top-nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 40px;
-  background:white;
-  box-shadow:0 2px 8px rgba(0,0,0,0.05);
-}
+ 
 
-.top-nav h2{
-  color:#2563eb;
-  font-weight:700;
-}
+
 /* ---------- MOBILE RESPONSIVE ---------- */
 
  
@@ -967,6 +960,9 @@ background:#f3f4f6;
   /* NAV */
   .top-nav {
     padding: 12px 20px;
+      background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   }
 
   .top-nav h2 {
