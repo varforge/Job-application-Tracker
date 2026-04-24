@@ -3,7 +3,7 @@
 }
 
 html, body {
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 button, .card {
   transition: all 0.2s ease-in-out;
@@ -577,22 +577,6 @@ tbody tr {
 tbody tr:hover {
   background: rgba(255,255,255,0.05);
 }
- 
-.table-search{
-  margin:15px 0;
-}
-
-.table-search input{
-  width:300px;
-  padding:10px;
-  border-radius:6px;
-  border:1px solid #d1d5db;
-  outline:none;
-}
-
-.table-search input:focus{
-  border-color:#2563eb;
-}
 .dashboard-grid{
   display:grid;
   gap:30px;
@@ -600,9 +584,6 @@ tbody tr:hover {
   grid-template-columns: 0.9fr 2.1fr;
   align-items: start;
 }
-
-
- 
 .status-filters{
   margin:10px 0 15px 0;
 }
@@ -622,17 +603,18 @@ tbody tr:hover {
 }
 .table-search{
   position:relative;
-  width:320px;
+ width: 100%;
+  max-width: 300px;  
   margin:15px 0;
 }
-
 .table-search input{
   width:100%;
-  padding:10px 10px 10px 35px;
+  padding: 8px 10px 8px 32px;
+  font-size: 13px;
   border-radius:8px;
   border:1px solid #d1d5db;
   outline:none;
-  font-size:14px;
+  
 }
 
 .search-icon{
@@ -651,14 +633,17 @@ tbody tr:hover {
   box-shadow:0 0 0 2px rgba(37,99,235,0.15);
 }
 .table-controls{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
   margin:15px 0;
 }
 
 #statusFilter{
-  padding:8px 10px;
+  padding: 6px 8px;
+  font-size: 13px;
+  max-width: 140px;
   border-radius:6px;
   border:1px solid #d1d5db;
   cursor:pointer;
@@ -937,6 +922,8 @@ background: #334155;   /* dark highlight */
   }
   .chart-container {
     width: 100%;
+    max-width: 500px;   /* keeps it neat */
+    margin: 20px auto;
   }
   /* CARDS */
   .cards {
@@ -951,17 +938,12 @@ background: #334155;   /* dark highlight */
 
   /* SEARCH + FILTER */
   .table-controls {
-    flex-direction: column;
-    align-items: stretch;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
   }
 
-  .table-search {
-    width: 100%;
-  }
-
-  #statusFilter {
-    width: 100%;
-  }
+ 
 
   /* FORM */
   .form-row {
@@ -974,7 +956,9 @@ background: #334155;   /* dark highlight */
 
   /* CHART */
   .chart-wrapper {
-    width: 100%;
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
   }
   /* TABLE GRID SMALL */
   .table-header,
