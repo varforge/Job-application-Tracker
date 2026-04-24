@@ -611,15 +611,14 @@ tbody tr:hover {
   position:relative;
   display: flex;
   align-items: center;
-  background: #f1f1f1;
   border-radius: 10px;
   padding: 0;
   flex: 1;
   overflow:hidden;
 }
 .table-search input{
-  width:100%;
-  padding: 8px 10px 8px 32px;
+  width:auto;
+  padding: 0px 10px 8px 32px;
   font-size: 13px;
   border-radius:0;
   outline:none;
