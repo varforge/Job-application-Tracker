@@ -198,7 +198,7 @@ app.put("/applications/:id", async (req, res) => {
   try {
 
     const { id } = req.params;
-    const { company_name, role, status, applied_date } = req.body;
+    const { company, role, status, applied_date } = req.body;
 
     await pool.query(
       `UPDATE applications
@@ -207,7 +207,7 @@ app.put("/applications/:id", async (req, res) => {
            status=$3,
            applied_date=$4
        WHERE id=$5`,
-      [company_name, role, status, applied_date, id]
+      [company, role, status, applied_date, id]
     );
 
     res.json({ message: "Application updated successfully" });
