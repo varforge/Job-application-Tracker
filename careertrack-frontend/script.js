@@ -202,13 +202,14 @@ console.log("SENDING DATA:", data);
       },
       body: JSON.stringify(data)
     });
+    submitBtn.innerText = "Add Application";
     if (editId) {
   // remove ?id= from URL
   window.history.replaceState({}, document.title, "index.html");
 
   // reset button + title
   document.getElementById("formTitle").innerText = "Add New Application";
-  submitBtn.innerText = "Add Application";
+  
 }
 
     
