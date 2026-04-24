@@ -823,20 +823,10 @@ cursor:pointer;
   padding:10px;
   cursor:pointer;
 }
-
-/* .suggestion-item:hover{
-  background:rebeccapurple;
-} */
 .suggestions-box div:hover {
   background: #334155;
 }
- 
-/* 
-.suggestions-box div:hover{
-background:#f3f4f6;
-} */
- 
-.form-row > div{
+ .form-row > div{
   flex: 1;
 }
 
@@ -918,13 +908,7 @@ background: #334155;   /* dark highlight */
 }
  
 
-
-/* ---------- MOBILE RESPONSIVE ---------- */
-
  
-
-/* -------- MOBILE TABLE SCROLL -------- */
-
 
 
  
@@ -973,6 +957,9 @@ background: #334155;   /* dark highlight */
   select {
     width: 100%;
      box-sizing: border-box;
+  }
+  .chart-container {
+    width: 100%;
   }
   /* CARDS */
   .cards {
@@ -1094,4 +1081,44 @@ background: #334155;   /* dark highlight */
 }
 .table-row:last-child {
   margin-bottom: 20px; /* space after last row */
+}
+@media (max-width: 600px) {
+
+  .table-header {
+    display: none;   /* hide header */
+  }
+
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 12px;
+    background: #020617;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+
+  .table-row div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  .card {
+    padding: 16px;
+    margin-top: 15px;
+  }
+
+  /* Add labels manually */
+  .table-row div:nth-child(1)::before { content: "Company"; }
+  .table-row div:nth-child(2)::before { content: "Role"; }
+  .table-row div:nth-child(3)::before { content: "Status"; }
+  .table-row div:nth-child(4)::before { content: "Date"; }
+  .table-row div:nth-child(5)::before { content: "Action"; }
+
+  .table-row div::before {
+    font-weight: 600;
+    color: #94a3b8;
+  }
+    .table-search {
+    width: 100%;
+  }
 }
