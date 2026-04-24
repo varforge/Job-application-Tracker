@@ -611,6 +611,7 @@ tbody tr:hover {
   position:relative;
   display: flex;
   align-items: center;
+  background: #ffffff;
   border-radius: 10px;
   padding: 0;
   flex: 1;
@@ -652,8 +653,8 @@ tbody tr:hover {
   font-size: 14px;
   border-radius: 10px;
   border: none;
-  background: #1e293b;   /* 🔥 main color */
-  color: #f1f5f9;        /* 🔥 text color */
+  background:  #ffffff;   /* 🔥 main color */
+  color: #111827;        /* 🔥 text color */
   cursor: pointer;
   outline: none;
 }
