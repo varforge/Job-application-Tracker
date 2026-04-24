@@ -3,7 +3,7 @@
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 button, .card {
   transition: all 0.2s ease-in-out;
@@ -39,25 +39,6 @@ h1 {
   text-align: center;
   font-weight: 700;
   margin-bottom: 30px;
-}
-
-.card {
-  background: #1e293b;
-  padding: 25px;
-  border-radius: 12px;
-  margin-bottom: 25px;
-  backdrop-filter: blur(10px);
-  animation: fadeIn 0.4s ease-in;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 div {
   background-color: inherit;
@@ -461,19 +442,23 @@ button:hover {
   color: #ffffff;
   padding: 25px;
   border-radius: 12px;
-
-  /* ADD THIS ↓ */
-  border: 1px solid #333;
+   border: 1px solid #333;
 
   /* refine shadow */
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
 
   text-align: center;
   margin-top: 40px;
-
+  width: 100%;
+  box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* equal width always */
+  gap: 12px;
+  padding: 10px;
+}
 .card p{
     font-size:28px;
     font-weight:bold;
@@ -535,7 +520,7 @@ button:hover {
   padding: 20px;
   position: relative;
   width:100%;
-  overflow-x:hidden;
+  overflow-x:auto;
 }
 /* .table-header {
   display: grid;
@@ -559,10 +544,7 @@ button:hover {
   border-bottom: 1px solid rgba(255,255,255,0.05);
   align-items: center;
 }
-table{
-  width:100%;
-  border-collapse:collapse;
-}
+
 
 /* th{
   position:sticky;
@@ -906,12 +888,7 @@ background: #334155;   /* dark highlight */
 #datePicker {
   padding-left: 35px;
 }
- 
 
- 
-
-
- 
 /* -------- BETTER TABLE LOOK -------- */
 
 #applicationsTable {
@@ -999,17 +976,12 @@ background: #334155;   /* dark highlight */
   .chart-wrapper {
     width: 100%;
   }
-
-  /* TABLE SCROLL */
-  .table-container {
-    overflow-x: auto;
-  }
-
   /* TABLE GRID SMALL */
   .table-header,
   .table-row {
     grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
     font-size: 12px;
+    
   }
 
 }
@@ -1056,6 +1028,7 @@ background: #334155;   /* dark highlight */
   display: grid;
   grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
   align-items: center;
+  min-width: 600px;
 }
 
 .table-header {
@@ -1084,19 +1057,6 @@ background: #334155;   /* dark highlight */
 }
 @media (max-width: 600px) {
 
-  .table-header {
-    display: none;   /* hide header */
-  }
-
-  .table-row {
-    grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 12px;
-    background: #020617;
-    border-radius: 10px;
-    margin-bottom: 12px;
-  }
-
   .table-row div {
     display: flex;
     justify-content: space-between;
@@ -1107,18 +1067,21 @@ background: #334155;   /* dark highlight */
     margin-top: 15px;
   }
 
-  /* Add labels manually */
-  .table-row div:nth-child(1)::before { content: "Company"; }
-  .table-row div:nth-child(2)::before { content: "Role"; }
-  .table-row div:nth-child(3)::before { content: "Status"; }
-  .table-row div:nth-child(4)::before { content: "Date"; }
-  .table-row div:nth-child(5)::before { content: "Action"; }
-
   .table-row div::before {
     font-weight: 600;
     color: #94a3b8;
   }
     .table-search {
     width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .cards-container {
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .card {
+    padding: 12px;
   }
 }
