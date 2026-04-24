@@ -3,7 +3,7 @@
 }
 
 html, body {
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 button, .card {
   transition: all 0.2s ease-in-out;
@@ -503,6 +503,8 @@ button:hover {
     margin:40px auto;
     max-width:900px;
     box-shadow:0 15px 35px rgba(0, 0, 0, 0.45);
+    overflow:hidden;
+
 }
   
 
@@ -611,16 +613,17 @@ tbody tr:hover {
   align-items: center;
   background: #f1f1f1;
   border-radius: 10px;
-  padding: 8px 12px;
+  padding: 0;
   flex: 1;
+  overflow:hidden;
 }
 .table-search input{
   width:100%;
   padding: 8px 10px 8px 32px;
   font-size: 13px;
-  border-radius:8px;
-  border:1px solid #d1d5db;
+  border-radius:0;
   outline:none;
+  background: transparent;
   
 }
 
@@ -631,6 +634,7 @@ tbody tr:hover {
   transform:translateY(-50%);
   color:#6b7280;
   align-items: center;
+  width:auto;
 }
 .table-search input:focus{
   border-color:#2563eb;
@@ -1057,5 +1061,8 @@ background: #334155;   /* dark highlight */
 
   .card {
     padding: 12px;
+  }
+  .chart-card {
+    margin: 20px auto;
   }
 }
