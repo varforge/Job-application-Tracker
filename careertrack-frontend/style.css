@@ -617,12 +617,13 @@ tbody tr:hover {
   overflow:hidden;
 }
 .table-search input{
-  width:auto;
+  width:100%;
   padding: 7px 10px 8px 32px;
   font-size: 13px;
   border-radius:0;
   outline:none;
-  background: whitesmoke;
+  border:none;
+  background: transparent;
   
 }
 
