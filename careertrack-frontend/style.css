@@ -642,11 +642,11 @@ tbody tr:hover {
   box-shadow:0 0 0 2px rgba(37,99,235,0.15);
 }
 .table-controls{
+   
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin:10px 0;
-  -webkit-overflow-scrolling: touch;
+  gap: 10px;
+  margin: 10px 0;
+ 
 }
 
 #statusFilter{
@@ -960,11 +960,6 @@ background: #334155;   /* dark highlight */
   .cards {
     grid-template-columns: 1fr;
   }
-
-  .table-controls {
-    flex-direction: column;
-  }
-   
   .cards-container {
     gap: 10px;
     padding: 8px;
@@ -1056,6 +1051,7 @@ background: #334155;   /* dark highlight */
    .table-controls {
     flex-direction: row;        /* 🔥 keep in one line */
     overflow-x: auto;           /* 🔥 allow horizontal scroll */
+    flex-wrap: nowrap; 
     gap: 10px;   /* full width */
   }
    #statusFilter {
