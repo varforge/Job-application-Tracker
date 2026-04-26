@@ -907,8 +907,6 @@ background: #334155;   /* dark highlight */
   transition: background 0.2s ease;
 }
 /* ===== MOBILE RESPONSIVE ===== */
-
-/* 
 @media (max-width: 768px) {
 
   /* NAV */
@@ -953,7 +951,7 @@ background: #334155;   /* dark highlight */
     
   }
 
-
+}
 /* overriding */
 /* 📱 Mobile (phones) */
 @media (max-width: 480px) {
