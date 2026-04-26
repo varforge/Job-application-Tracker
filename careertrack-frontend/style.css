@@ -1063,3 +1063,98 @@ background: #334155;   /* dark highlight */
     max-width: 220px;
   }
 } 
+/* =========================
+   RESPONSIVE FIX (SAFE)
+   ========================= */
+
+
+/* 📲 Tablets */
+@media (max-width: 768px) {
+
+  /* NAV */
+  .top-nav {
+    padding: 12px 20px;
+  }
+
+  .top-nav h2 {
+    font-size: 18px;
+  }
+
+  /* DASHBOARD GRID */
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* CARDS (keep your design but fit screen) */
+  .cards {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* FORM */
+  .form-row {
+    flex-direction: column !important;
+  }
+
+  /* TABLE CONTROLS (search + filter) */
+  .table-controls {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .table-search {
+    width: 100% !important;
+  }
+
+  #statusFilter {
+    width: 100% !important;
+  }
+
+  /* FIX BUTTON SHIFT ISSUE */
+  .table-controls button {
+    width: 100%;
+  }
+}
+
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+
+  /* CARDS → single column */
+  .cards {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* CARD SPACING */
+  .card {
+    margin-top: 15px !important;
+    padding: 15px !important;
+  }
+
+  /* NAV */
+  .top-nav {
+    padding: 10px 15px;
+  }
+
+  .top-nav h2 {
+    font-size: 16px;
+  }
+
+  /* FORM FULL WIDTH */
+  input,
+  select,
+  button {
+    width: 100% !important;
+  }
+
+  /* TABLE CONTROLS STACK */
+  .table-controls {
+    gap: 10px;
+  }
+}
+
+
+/* 📊 TABLE SAFETY (very important, keep your table working) */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
